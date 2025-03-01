@@ -45,14 +45,7 @@
         };
     };
 
-    behaviors {
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <POUND MINUS BACKSPACE UNDERSCORE>;
-        };
-    };
+
 
     keymap {
         compatible = "zmk,keymap";
