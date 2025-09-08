@@ -62,6 +62,20 @@
             bindings = <&kp Q &kp T &kp D &kp N8 &kp N4 &kp N5 &kp N6>;
             label = "QNUM";
         };
+
+        bg_email: bg_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp D &kp R &kp E &kp W &kp DOT &kp T &kp H &kp O &kp M &kp P &kp S &kp O &kp N &kp AT &kp B &kp M &kp W &kp G &kp R &kp O &kp U &kp P &kp DOT &kp C &kp O &kp M>;
+            label = "BG_EMAIL";
+        };
+
+        ot_email: ot_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp D &kp R &kp E &kp W &kp DOT &kp M &kp DOT &kp T &kp H &kp O &kp M &kp P &kp S &kp O &kp N &kp AT &kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M>;
+            label = "OT_EMAIL";
+        };
     };
 
     keymap {
@@ -125,11 +139,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans                &kp HOME        &trans                 &trans                       &trans     &trans          &msc SCRL_DOWN  &trans           &trans   &trans
-&trans  &trans  &kp LA(LEFT)          &kp UP_ARROW    &kp LA(RIGHT)          &mkp MCLK                    &kp PG_UP  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &kp N0   &trans
-&trans  &trans  &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT_ARROW        &mkp MB1                     &kp PG_DN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp DEL  &kp BSPC
-&trans  &trans  &kp LG(LEFT_BRACKET)  &kp END         &kp LG(RIGHT_BRACKET)  &mkp RCLK  &trans    &qnum   &trans     &mkp MB1        &msc SCRL_UP    &mkp MB2         &trans   &trans
-                &trans                &trans          &trans                 &trans     &trans    &trans  &trans     &trans          &trans          &trans
+&trans  &trans  &trans                &kp HOME        &trans                 &trans                       &trans     &trans           &msc SCRL_DOWN  &trans           &trans    &trans
+&trans  &trans  &kp LA(LEFT)          &kp UP_ARROW    &kp LA(RIGHT)          &trans                       &kp PG_UP  &mkp MB4         &mmv MOVE_UP    &mkp MB5         &mkp MB3  &trans
+&trans  &trans  &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT_ARROW        &ot_email                    &mkp MB1   &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB2  &kp BSPC
+&trans  &trans  &kp LG(LEFT_BRACKET)  &kp END         &kp LG(RIGHT_BRACKET)  &bg_email  &trans    &qnum   &trans     &msc SCRL_RIGHT  &msc SCRL_UP    &msc SCRL_LEFT   &trans    &trans
+                &trans                &trans          &trans                 &trans     &trans    &trans  &trans     &trans           &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
