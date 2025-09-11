@@ -139,8 +139,8 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans                &kp HOME        &trans                 &trans                       &trans     &trans           &msc SCRL_DOWN  &trans           &trans    &trans
-&trans  &trans  &kp LA(LEFT)          &kp UP_ARROW    &kp LA(RIGHT)          &trans                       &kp PG_UP  &mkp MB4         &mmv MOVE_UP    &mkp MB5         &mkp MB3  &trans
+&trans  &trans  &trans                &kp HOME        &trans                 &bg_email                    &trans     &trans           &msc SCRL_DOWN  &trans           &trans    &trans
+&trans  &trans  &kp LA(LEFT)          &kp UP_ARROW    &kp LA(RIGHT)          &ot_email                    &kp PG_UP  &mkp MB4         &mmv MOVE_UP    &mkp MB5         &mkp MB3  &trans
 &trans  &trans  &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT_ARROW        &ot_email                    &mkp MB1   &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB2  &kp BSPC
 &trans  &trans  &kp LG(LEFT_BRACKET)  &kp END         &kp LG(RIGHT_BRACKET)  &bg_email  &trans    &qnum   &trans     &msc SCRL_RIGHT  &msc SCRL_UP    &msc SCRL_LEFT   &trans    &trans
                 &trans                &trans          &trans                 &trans     &trans    &trans  &trans     &trans           &trans          &trans
